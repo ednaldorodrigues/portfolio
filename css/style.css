@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body , html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background-color: #010A1B;
+    color: #AFCCF8;
+    font-weight: bold;
+}
+
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    padding: 10px;
+    color: #AFCCF8;
+    font-weight: bold;
+}
+
+nav a:hover {
+    padding: 10px;
+    transition: all 0.3s;
+    border: 4px;
+    background: #171C46;
+}
+
+nav li {
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.btn-mobile {
+    border: none;
+    background: none;
+    display: flex;
+    position: relative;
+}
+
+.menu-mobile {
+    width: 35px;
+    border-top: 3px solid;
+    display: none;
+    color: white;
+    position: absolute;
+    top: 7px;
+    left: -82px;
+}
+
+.menu-mobile::before, .menu-mobile::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+#sobre-mim .name h1 {
+    font-size: 4rem;
+}
+
+#sobre-mim {
+    
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+picture img {
+    
+}
+
+#projetos h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+#projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meus-projetos {
+    background: #171C46;
+    margin-bottom: 30px;
+    height: 280px;
+    width: 400px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+}
+
+.meus-projetos h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.meus-projetos p {
+    font-size: 1.5rem;
+}
+
+.btn {
+    margin-top: 25px;
+    background-color: #010A1B;
+    color: #AFCCF8;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px 40px;
+    border: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all .2s;
+}
+
+.btn:hover {
+    background-color: #171C46;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.meus-contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.meus-contatos a {
+    text-decoration: none;
+    color: #AFCCF8;
+}
+
+.meus-contatos a:hover {
+    color: #171C46;
+}
+
+#contato h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.email i {
+   font-size: 1.8rem; 
+}
+
+.linkedin i {
+    font-size: 1.8rem;
+}
+
+.github i {
+    font-size: 1.8rem;
+}
+
+.whatsapp i {
+    font-size: 1.8rem;
+}
+
+.email a {
+    display: flex;
+    font-size: 1.3rem;
+    gap: 10px;
+}
+
+.linkedin a {
+    font-size: 1.3rem;
+    display: flex;
+    gap: 10px
+}
+
+.github a {
+    font-size: 1.3rem;
+    display: flex;
+    gap: 10px
+}
+
+.whatsapp a {
+    font-size: 1.3rem;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 1080px) {
+    picture img {
+        display: none;
+    }
+
+    #sobre-mim {
+    max-width: 750px;
+    }
+}
+
+@media (max-width: 830px) {
+    #sobre-mim .name h1 {
+        font-size: 3.5rem;
+    }
+
+    #sobre-mim {
+        max-width: 670px;
+    }
+}
+
+@media (max-width: 750px) {
+    #sobre-mim .name h1 {
+        font-size: 3rem;
+    }
+
+    #sobre-mim {
+        max-width: 570px;
+    }
+
+    #projetos h1 {
+        font-size: 1.7rem;
+    }
+
+    .meus-projetos h2 {
+        font-size: 1.7rem;
+    }
+
+    .meus-projetos p {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    #sobre-mim .name h1 {
+        font-size: 2.5rem;
+    }
+
+    #sobre-mim {
+        max-width: 500px;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: -110px;
+        border-radius: 4px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.6s;
+        background: #171C46;
+    }
+
+    #menu-nav.ativo .menu{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #menu-nav.ativo .menu-mobile {
+        border-top-color: transparent;
+    }
+
+    #menu-nav.ativo .menu-mobile::before {
+        transform: rotate(135deg);
+    }
+
+    #menu-nav.ativo .menu-mobile::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .menu:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -20px;
+        left: 35px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #AFCCF8;
+    }
+
+    .meus-contatos {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 550px) {
+    #sobre-mim .name h1 {
+        font-size: 2.1rem;
+    }
+
+    #sobre-mim {
+        max-width: 400px;
+    }
+
+    .meus-projetos {
+        height: 270px;
+        width: 340px;
+    }
+
+}
+
+
+@media (max-width: 432px) {
+    #sobre-mim .name h1 {
+        font-size: 1.8rem;
+    }
+
+    #sobre-mim {
+        max-width: 350px;
+    }
+
+    .meus-projetos {
+        height: 260px;
+        width: 330px;
+    }
+
+    .meus-projetos h2 {
+        font-size: 1.7rem;
+    }
+
+    #contato h1 {
+        font-size: 1.7rem;
+    }
+
+    .meus-contatos a{
+        font-size: 1.1rem;
+    }
+}
